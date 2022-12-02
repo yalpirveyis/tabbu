@@ -10,6 +10,7 @@ export default function CustomButton({
   disable,
   buttonWidth,
   bgColor,
+  disableColor,
 }) {
   return (
     <TouchableOpacity
@@ -18,19 +19,25 @@ export default function CustomButton({
       style={{
         width: buttonWidth ? buttonWidth : size.buttonDefaultWidth,
         height: size.buttonDefaultHeight,
-        backgroundColor: bgColor ? bgColor : colors.white,
+        backgroundColor: disableColor
+          ? colors.white
+          : bgColor
+          ? bgColor
+          : colors.white,
         alignSelf: "center",
         borderRadius: size.radius,
         justifyContent: "center",
         alignItems: "center",
         marginBottom: size.mb,
+        borderWidth: disableColor ? 3 : 0,
+        borderColor: disableColor && colors.red,
       }}
     >
       <Text
         style={{
           fontWeight: "800",
           fontSize: 20,
-          color: color ? color : colors.blue,
+          color: disableColor ? colors.red : color ? color : colors.blue,
         }}
       >
         {children}

@@ -1,0 +1,15 @@
+export default {
+  wrongAnswer: 2,
+  time: 30,
+  lap: 6,
+  pass: 3,
+  tabu: 2,
+  minTime: 3,
+  maxTime: 180,
+  minLap: 2,
+  maxLap: 10,
+  minPass: 0,
+  maxPass: 5,
+  minTabu: 1,
+  maxTabu: 5,
+};

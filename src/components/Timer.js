@@ -3,7 +3,7 @@ import React from "react";
 import size from "../constants/theme/size";
 import colors from "../constants/theme/colors";
 
-export default function Timer({ time }) {
+export default function Timer({ time, gameTotalTime }) {
   return (
     <View
       style={{
@@ -14,18 +14,19 @@ export default function Timer({ time }) {
         height: size.timerHeight,
         borderRadius: size.radius,
         alignItems: "center",
-        justifyContent: "space-between",
       }}
     >
       <View
         style={{
-          width: size.buttonDefaultWidth - 200,
+          width: (size.buttonDefaultWidth / time) * gameTotalTime,
           backgroundColor: colors.green,
           height: size.timerHeight,
           borderRadius: size.radius,
         }}
       />
-      <Text style={{ marginRight: 10, fontWeight: "600" }}>30</Text>
+      <Text style={{ position: "absolute", right: 10, fontWeight: "600" }}>
+        {gameTotalTime}
+      </Text>
     </View>
   );
 }

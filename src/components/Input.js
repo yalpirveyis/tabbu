@@ -3,7 +3,14 @@ import { TextInput } from "react-native";
 import colors from "../constants/theme/colors";
 import size from "../constants/theme/size";
 
-export default function Input({ InputWidth, value, placeholder }) {
+export default function Input({
+  InputWidth,
+  value,
+  placeholder,
+  onChangeText,
+  keyboardType,
+  isValid,
+}) {
   return (
     <TextInput
       style={{
@@ -11,14 +18,16 @@ export default function Input({ InputWidth, value, placeholder }) {
         height: size.buttonDefaultHeight,
         borderRadius: size.radius,
         backgroundColor: colors.white,
+        borderWidth: 2,
+        borderColor: isValid == false ? colors.red : colors.white,
         alignSelf: "center",
         marginBottom: size.mb,
         padding: 10,
       }}
-      //onChangeText={setNumber}
+      onChangeText={onChangeText}
       value={value}
       placeholder={placeholder}
-      keyboardType="numeric"
+      keyboardType={keyboardType ? keyboardType : "default"}
     />
   );
 }

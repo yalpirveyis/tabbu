@@ -20,9 +20,12 @@ Word Json
 
 Figma dan react a kod dönüşümü ve react native e kod dönüşümü var mı araştırılacak
 
-props
-        onChangeText={(text) => setForm({ ...form, Team2: text })}
 
-component
-      onChangeText={onChangeText}
+
+
+
+Birden fazla data seti eklenebilir
+
+Modal arayüzü düzenlenebilir
+
 
