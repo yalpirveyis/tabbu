@@ -26,6 +26,3 @@ props
 component
       onChangeText={onChangeText}
 
-
- git config --global user.email "yalpirveyis@gmail.com"
-  git config --global user.name "yalpirveyis"
