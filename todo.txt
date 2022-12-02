@@ -1,0 +1,31 @@
+#Tamamlananlar
+
+Folder Structure
+Navigation  
+Constants Colors
+Constants Size
+
+
+
+#Yapılacaklar
+
+TextInput Component
+CustomButton Component
+Modal Component
+Timer Component
+
+Diagram Design 
+
+Word Json
+
+Figma dan react a kod dönüşümü ve react native e kod dönüşümü var mı araştırılacak
+
+props
+        onChangeText={(text) => setForm({ ...form, Team2: text })}
+
+component
+      onChangeText={onChangeText}
+
+
+ git config --global user.email "yalpirveyis@gmail.com"
+  git config --global user.name "yalpirveyis"
